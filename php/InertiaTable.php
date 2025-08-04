@@ -402,7 +402,7 @@ class InertiaTable
      * @param array $params = []
      * @return self
      */
-    public function customFilter(string $key, string $label = null, bool $defaultValue = null, array $params = []): self
+    public function customFilter(string $key, string $label = null, mixed $defaultValue = null, array $params = []): self
     {
         $this->filters = $this->filters->reject(function (Filterable $filter) use ($key) {
             return $filter->key === $key;
